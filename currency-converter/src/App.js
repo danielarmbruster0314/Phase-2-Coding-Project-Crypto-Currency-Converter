@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import Header from './Header.js';
+import Convert from './Convert.js';
 function App() {
 
 useEffect(()=>{
@@ -21,6 +22,7 @@ useEffect(()=>{
   return (
     <div className="App">
       <Header />
+      <Convert />
     </div>
   );
 }
