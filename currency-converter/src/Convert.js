@@ -186,6 +186,7 @@ function Convert(){
         <option value="LCC">Litecoin-Cash</option>
         <option value="ATOM">Cosmos</option>
             </select>
+            <button>Convert</button>
         </div>
     )
 }
