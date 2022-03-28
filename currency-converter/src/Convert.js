@@ -164,6 +164,28 @@ function Convert(){
                 <option value="ZMW">Zambian Kwacha</option>
                 <option value="ZWl">Zimbabwean Dollar</option>
             </select>
+            <select name="cripto">
+        <option>Bitcoin</option>
+        <option value="ETH">Ethereum</option>
+        <option value="USDT">Tether</option>
+        <option value="BNB">Binance-Coin</option>
+        <option value="XRP">Ripple</option>
+        <option value="ADA">Cardano</option>
+        <option value="SOL">Solana</option>
+        <option value="TRC">Terracoin</option>
+        <option value="AVAX">Avalanche</option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+            </select>
         </div>
     )
 }
