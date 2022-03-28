@@ -174,17 +174,17 @@ function Convert(){
         <option value="SOL">Solana</option>
         <option value="TRC">Terracoin</option>
         <option value="AVAX">Avalanche</option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
+        <option value="DOT">Polkadot</option>
+        <option value="DOGE">DogeCoin</option>
+        <option value="BUSD">Binance-USD</option>
+        <option value="UST">TerraUSD</option>
+        <option value="SHIB">SHIBA-INU</option>
+        <option value="WBTC">Wrapped Bitcoin</option>
+        <option value="MATIC">Polygon</option>
+        <option value="CRO">Crypto.com Coin</option>
+        <option value="DAI">Dai</option>
+        <option value="LCC">Litecoin-Cash</option>
+        <option value="ATOM">Cosmos</option>
             </select>
         </div>
     )
