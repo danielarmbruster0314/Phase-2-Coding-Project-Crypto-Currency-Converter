@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import Header from './Header.js';
 import Convert from './Convert.js';
+import Exchange from './Exchange.js';
+import NewsList from './NewsList.js';
 function App() {
 
 useEffect(()=>{
@@ -23,6 +25,8 @@ useEffect(()=>{
     <div className="App">
       <Header />
       <Convert />
+      <Exchange />
+      <NewsList />
     </div>
   );
 }
