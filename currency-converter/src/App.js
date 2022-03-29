@@ -1,9 +1,27 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Header.js';
 import Convert from './Convert.js';
 import Exchange from './Exchange.js';
 import NewsList from './NewsList.js';
 function App() {
+const [article, setArticle] = useState([])
+
+useEffect(()=>{
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'crypto-news-live3.p.rapidapi.com',
+      'X-RapidAPI-Key': '89810da5e7msh75b30d17b69208cp1d4af1jsne241ce2de733'
+    }
+  };
+  
+  fetch('https://crypto-news-live3.p.rapidapi.com/news', options)
+    .then(response => response.json())
+    .then(response => setArticle(response))
+    .catch(err => console.error(err));
+},[])
+console.log(article)
+
 
 useEffect(()=>{
   // const options = {
@@ -26,7 +44,7 @@ useEffect(()=>{
       <Header />
       <Convert />
       <Exchange />
-      <NewsList />
+      <NewsList articles={article}/>
     </div>
   );
 }
