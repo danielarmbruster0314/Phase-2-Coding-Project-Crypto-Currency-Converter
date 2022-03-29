@@ -1,32 +1,13 @@
-
-
-
-
-
-.card img {
-  width: 100%;
-}
-:root {
-  --crimson: #D7263D;
-  --portland-orange: #F46036; 
-  --space-cadet: #1B998B;
-  --june-bud: #C5D86D;
-  background: linear-gradient(#c6dbda,#fee1e8,#fed7c3, #f6eac2, #ecd5e3);
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.artcontainer{
-  display: flex;
-}
-.card{
-  display: inline-block;
-}
-.the-card {
- background-color: #1B998B;
- width: 220px;
- height: 220px;
-}
-
-.li {
-  list-style: none;
- 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

@@ -6,9 +6,9 @@ function NewsList({articles}){
   })
   
     return(
-        <div className="artcontainer">
+        <div className='Newsdiv'>
             <h1>Related News</h1>
-            <ul className="li">
+            <ul>
                 {list}
             </ul>
         </div>

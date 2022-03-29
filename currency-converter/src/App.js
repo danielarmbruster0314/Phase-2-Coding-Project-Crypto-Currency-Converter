@@ -3,7 +3,6 @@ import Header from './Header.js';
 import Convert from './Convert.js';
 import Exchange from './Exchange.js';
 import NewsList from './NewsList.js';
-
 function App() {
 const [article, setArticle] = useState([])
 
@@ -21,7 +20,7 @@ useEffect(()=>{
     .then(response => setArticle(response))
     .catch(err => console.error(err));
 },[])
-
+console.log(article)
 let articles=article.splice(0,10)
 
 useEffect(()=>{
