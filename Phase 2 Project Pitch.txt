@@ -1,0 +1,9 @@
+Crypto-Currency API Project
+Pitch: this project creates a dashboard to browse and monitor various crypto-currency prices and delivers crypto related news. Both of these sources come from seprate external API's.
+
+User story:
+As a user, I will be able to see the top six crypto-currencies and their prices on the front page.
+
+As a user, I can select a fiat currency and convert it to the current price of a crypto-currency.
+
+As a user, I can recieve crypto related news and be routed to external sites with further readings.
