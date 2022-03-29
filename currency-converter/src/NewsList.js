@@ -1,17 +1,14 @@
-
-
-
-function NewsList({/*data*/}){
+function NewsList({articles}){
   
-  //let list = data.map((article) =>{
-  //    <Article article={article}/>
-  //})
+  let list = articles.map((article) =>{
+      <Article article={article}/>
+  })
   
     return(
         <div className='Newsdiv'>
             <h1>Related News</h1>
             <ul>
-                {/*list*/} Article list
+                {list}
             </ul>
         </div>
     )
