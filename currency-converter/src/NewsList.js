@@ -1,7 +1,8 @@
+import Article from "./Article";
+
 function NewsList({articles}){
-  
   let list = articles.map((article) =>{
-      <Article article={article}/>
+      return <Article key={article.url} article={article}/>
   })
   
     return(
@@ -15,4 +16,4 @@ function NewsList({articles}){
 }
 
 
-export default NewsList
+export default NewsList;

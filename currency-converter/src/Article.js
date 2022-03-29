@@ -1,10 +1,10 @@
-function Article({/*article */}){
+function Article({article}){
     return(
         <li>
-            <img></img>
-            <h4>{/*article title*/}</h4>
-            <a>{/*article link*/}</a>
+            <img src="https://source.unsplash.com/random/?Cryptocurrency" alt="sample text"></img>
+            <h4>{article.title}</h4>
+            <a href={article.url}>Click here to read article</a>
         </li>
     )
 }
-export default Article
+export default Article;
