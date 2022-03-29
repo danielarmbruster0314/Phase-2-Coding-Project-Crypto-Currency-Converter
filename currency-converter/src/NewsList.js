@@ -18,4 +18,4 @@ function NewsList({/*data*/}){
 }
 
 
-export default NewsList
+export default NewsListls
