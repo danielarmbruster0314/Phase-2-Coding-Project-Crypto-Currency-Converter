@@ -21,7 +21,7 @@ useEffect(()=>{
     .catch(err => console.error(err));
 },[])
 console.log(article)
-
+let articles=article.splice(0,10)
 
 useEffect(()=>{
   // const options = {
@@ -44,7 +44,7 @@ useEffect(()=>{
       <Header />
       <Convert />
       <Exchange />
-      <NewsList articles={article}/>
+      <NewsList articles={articles}/>
     </div>
   );
 }
