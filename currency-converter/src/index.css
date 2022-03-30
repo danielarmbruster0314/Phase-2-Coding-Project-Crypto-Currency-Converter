@@ -54,12 +54,12 @@
 }
 
 .li {
-  list-style: none;
+ list-style: none;
  
 }
 
 .convert{
-  background-color: var(--portland-orange);
+ background-color: var(--portland-orange);
  border-radius: 25px;
 }
 
@@ -77,4 +77,24 @@ table{
 
 #cripto{
   width: 250px;
+  cursor: pointer;
+}
+
+#currentCurrency{
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h2{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p{
+  font-size: 20px;
 }

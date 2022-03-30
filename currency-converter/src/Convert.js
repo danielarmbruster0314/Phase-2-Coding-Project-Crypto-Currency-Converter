@@ -72,7 +72,7 @@ console.log(displayResult)
                 <input type="number" disabled={true}  value={displayResult} id="converted" name="converted" dir="rtl" placeholder="0.00"/>
                     </td>
                         <td>
-                            <select onChange={(e)=>{setCurrent(e.target.value)}} value={current} name="currentCurrency">
+                            <select onChange={(e)=>{setCurrent(e.target.value)}} value={current} id="currentCurrency" name="currentCurrency">
                                         <option value="USD">United States Dollar</option>
                                         <option value="AED">United Arab Emirates Dirham</option>
                                         <option value="AFN">Afghan Afghani</option>
