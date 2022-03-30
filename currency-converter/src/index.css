@@ -3,7 +3,7 @@
 
 
 :root {
-  --crimson: #D7263D;
+  --crimson: rgba(215, 38, 61, 1);
   --portland-orange: rgba(244, 96, 54, 1); 
   --space-cadet: rgba(27, 153, 139, 1);
   --june-bud: #C5D86D;
@@ -16,6 +16,7 @@
   width: 75%;
   text-align: center;
   border-radius: 25px;
+  padding: 10px;
 }
 .card img {
   width: 100%;
@@ -26,16 +27,26 @@
   font-family: 'Press Start 2P';
   color: var(--space-cadet);
   text-shadow: 2px 2px var(--portland-orange);
-  margin: 30%;
+  margin: 24%;
   
 }
 
 .article{
   margin: 5px;
-  
+  padding: 15px;
+  border-radius: 15px;
+  border: solid var(--june-bud);
+  box-shadow: 0 0 1.5em black;
 }
-.article{
 
+.articlelinks{
+  text-decoration: none;
+  background: linear-gradient(rgba(244, 96, 54, 1), rgba(215, 38, 61, 1) ) ;
+  color: var(--june-bud);
+  border-radius: 5px;
+  box-shadow: 0 0 1em black;
+  padding: 2.5px;
+  border: solid  1.5px var(--june-bud);
 }
 
 .articlelist li{
@@ -68,7 +79,7 @@
 
 .criptodashboard{
   background-color: #1B998B;
-  margin: 0 auto;
+  margin: 15%;
   text-align: center;
   border-radius: 25px;
 }
@@ -109,4 +120,7 @@ p{
 
 .Navlink{
   text-decoration: none;
+}
+.imagesfromarticle{
+  border: solid 2px var(--june-bud)
 }
