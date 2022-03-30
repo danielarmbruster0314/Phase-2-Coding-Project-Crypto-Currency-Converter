@@ -6,7 +6,7 @@
   --crimson: rgba(215, 38, 61, 1);
   --portland-orange: rgba(244, 96, 54, 1); 
   --space-cadet: rgba(27, 153, 139, 1);
-  --june-bud: #C5D86D;
+  --june-bud: rgba(197, 216, 109, 1);
   background: linear-gradient(#c6dbda,#fee1e8,#fed7c3, #f6eac2, #ecd5e3);
 }
 .news-list{
