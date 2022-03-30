@@ -20,7 +20,7 @@ useEffect(()=>{
     .catch(err => console.error(err));
 },[])
 console.log(article)
-let articles=article.splice(20,30)
+let articles=article.splice(20, 12)
 
 useEffect(()=>{
   // const options = {
@@ -37,7 +37,7 @@ useEffect(()=>{
   //   .catch(err => console.error(err));
 },[])
 
-
+console.log(articles)
   return (
     <div className="App">
       <Header />
