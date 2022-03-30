@@ -118,9 +118,20 @@ p{
 }
 
 
-.Navlink{
+.NavLink{
   text-decoration: none;
+  padding: 30px;
 }
 .imagesfromarticle{
   border: solid 2px var(--june-bud)
+}
+.navbar{
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+background-color: rgb(0,0,0,.7); 
+padding: 30px;
+border-radius: 5px;
 }

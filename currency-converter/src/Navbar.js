@@ -16,24 +16,39 @@ const linkStyles = {
 
 function NavBar(){
     return(
-      <div>
+      <div className="navbar">
         <NavLink
         to="/"
         exact
+        style={{
+            margin: "5px 0px",
+            color: "rgba(27, 153, 139, 1)",
+            textDecoration: 'none'
+        }}
         className='navlink mainlink'>
           Main 
         </NavLink>
         <NavLink
         to="/converter"
         exact
+        style={{
+            margin: "5px 30px",
+            color: "rgba(27, 153, 139, 1)",
+            textDecoration: 'none'
+        }}
         className ="navlink converterlink">
           Converter
         </NavLink>
         <NavLink
         to="/news"
         exact
+        style={{
+            margin: "5px 0px",
+            color: "rgba(27, 153, 139, 1)",
+            textDecoration: 'none'
+        }}
         className='navlink newslink'>
-          Related Crytpo News
+          Crytpo News
         </NavLink>
       </div>
     )

@@ -7,8 +7,7 @@ const animation = keyframes`
 `
 
 const Header2 = styled.h1`
-animation-name: ${animation}
-animation-duration: 6s;
+animation: 1s ${animation} ease-out;
 `
 
 function Header(){
