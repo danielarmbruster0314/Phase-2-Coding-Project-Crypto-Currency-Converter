@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './Header.js';
 import Convert from './Convert.js';
-import Exchange from './Exchange.js';
 import NewsList from './NewsList.js';
 function App() {
 const [article, setArticle] = useState([])
@@ -43,7 +42,6 @@ useEffect(()=>{
     <div className="App">
       <Header />
       <Convert />
-      <Exchange />
       <NewsList articles={articles}/>
     </div>
   );
