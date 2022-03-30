@@ -1,11 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel&family=Press+Start+2P&family=Rock+3D&family=Space+Mono&family=Staatliches&family=Supermercado+One&display=swap');
 
 
-
-
-
-.card img {
-  width: 100%;
-}
 :root {
   --crimson: #D7263D;
   --portland-orange: #F46036; 
@@ -13,13 +8,38 @@
   --june-bud: #C5D86D;
   background: linear-gradient(#c6dbda,#fee1e8,#fed7c3, #f6eac2, #ecd5e3);
 }
+.news-list{
+  margin: 0 auto;
+  background-color: #D7263D;
+  height: 75%;
+  width: 75%;
+}
+.card img {
+  width: 100%;
+}
 .header{
   text-align: center;
+  border: solid var(--june-bud);
+  font-family: 'Press Start 2P';
+  color: var(--space-cadet);
+  text-shadow: 2px 2px var(--portland-orange);
 }
 
-.artcontainer{
-  display: flex;
+.article{
+  margin: 5px;
+  
 }
+.article{
+
+}
+
+.articlelist li{
+  list-style: none;
+  float: left;
+  background-color: #1B998B;
+  justify-content: center;
+}
+
 .card{
   display: inline-block;
 }
@@ -33,9 +53,7 @@
   list-style: none;
  
 }
-.news-list{
-  background-color: #D7263D;
-}
+
 .convert{
   background-color: var(--portland-orange);
  border-radius: 25px;

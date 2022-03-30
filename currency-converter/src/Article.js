@@ -1,6 +1,6 @@
 function Article({article}){
     return(
-        <li>
+        <li className="article">
             <div className="card">
             <div className='the-card'>
                 <img src="https://source.unsplash.com/random/?Cryptocurrency" alt="cripto"/> 
