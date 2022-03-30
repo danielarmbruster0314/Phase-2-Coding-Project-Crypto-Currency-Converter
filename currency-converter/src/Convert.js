@@ -7,7 +7,8 @@ const [converting, setConverting] = useState('BTC')
 const [amount, setAmount] = useState(1)
 const [exchange, setExchange] = useState(0)
 const [displayResult, setDisplayResult] = useState(0)
-
+const [submittedCurrent, setSubmittedCurrent] = useState('USD')
+const [submittedConverted, setSubmittedConverted] = useState('BTC')
 
 function convert(){
     const options = {
@@ -24,6 +25,8 @@ function convert(){
         console.log(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
         setExchange(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
         setDisplayResult(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"] * amount)
+        setSubmittedCurrent(current)
+        setSubmittedConverted(converting)
     })
     .catch(err => console.error(err));
 }
@@ -234,7 +237,7 @@ console.log(displayResult)
             </table>
         <button onClick={convert}>Convert</button>
     </div>
-    <Exchange exchange={exchange}/>
+    <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted}/>
     </div>
     )
 }

@@ -13,6 +13,9 @@
   --june-bud: #C5D86D;
   background: linear-gradient(#c6dbda,#fee1e8,#fed7c3, #f6eac2, #ecd5e3);
 }
+.header{
+  text-align: center;
+}
 
 .artcontainer{
   display: flex;
@@ -30,11 +33,17 @@
   list-style: none;
  
 }
-
+.news-list{
+  background-color: #D7263D;
+}
 .convert{
   background-color: var(--portland-orange);
+ border-radius: 25px;
 }
 
 .criptodashboard{
   background-color: #1B998B;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 25px;
 }
