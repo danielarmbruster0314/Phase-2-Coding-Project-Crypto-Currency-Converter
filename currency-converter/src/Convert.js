@@ -39,7 +39,7 @@ console.log(displayResult)
             <table>
                 <tbody>
                     <tr>
-                        <td>Current Currency:</td>
+                        <td className="currenceytext">Current Currency:</td>
                             <td><input type="number" onChange={(e) =>{setAmount(e.target.value)}} value={amount} id="current" name="current" dir="rtl" placeholder="0.00"/></td>
                                 <td>
                                 <select onChange={(e)=>{setConverting(e.target.value)}} value={converting} id="cripto" name="cripto">
@@ -67,7 +67,7 @@ console.log(displayResult)
                                  </td>
                             </tr>
             <tr>
-               <td>Converted Currency:</td>
+               <td className="currenceytext">Converted Currency:</td>
                      <td>
                 <input type="number" disabled={true}  value={displayResult} id="converted" name="converted" dir="rtl" placeholder="0.00"/>
                     </td>

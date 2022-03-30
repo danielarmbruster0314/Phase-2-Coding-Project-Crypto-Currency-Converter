@@ -11,8 +11,8 @@ function Exchange({ exchange, current, converted }){
     setIsOn((isOn)=>!isOn )
 }
     return(
-        <div>
-            <h1>Exchange Rate</h1>
+        <div className="exchanger">
+            <h1 className="rate">Exchange Rate</h1>
             {isOn ? <p>$ {Math.floor(exchange)}.00</p> : <p>$ {exchange}</p>}
             
             <p>{converted} to {current}</p>
