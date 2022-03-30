@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './Header.js';
 import Convert from './Convert.js';
-import Exchange from './Exchange.js';
 import NewsList from './NewsList.js';
 function App() {
 const [article, setArticle] = useState([])
@@ -21,7 +20,7 @@ useEffect(()=>{
     .catch(err => console.error(err));
 },[])
 console.log(article)
-
+let articles=article.splice(20, 12)
 
 useEffect(()=>{
   // const options = {
@@ -38,13 +37,12 @@ useEffect(()=>{
   //   .catch(err => console.error(err));
 },[])
 
-
+console.log(articles)
   return (
     <div className="App">
       <Header />
       <Convert />
-      <Exchange />
-      <NewsList articles={article}/>
+      <NewsList articles={articles}/>
     </div>
   );
 }

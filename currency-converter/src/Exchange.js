@@ -1,9 +1,9 @@
-function Exchange(){
+function Exchange({ exchange, current, converted }){
     return(
         <div>
             <h1>Exchange Rate</h1>
-            <p>0.00{/*num value*/}</p>
-            <p>{/*current*/}Current to Converted{/*converted*/}</p>
+            <p>$ {Math.floor(exchange)}.00</p>
+            <p>{converted} to {current}</p>
         </div>
     )
 }
