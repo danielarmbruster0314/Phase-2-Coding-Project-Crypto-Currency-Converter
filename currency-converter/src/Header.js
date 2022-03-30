@@ -10,9 +10,42 @@ const animation = keyframes`
 
 const Header2 = styled.h1`
 display: inline-block;
+h1{
+    display: inline-block;
 animation: 4s ${animation}  infinite ;
-
-
+}
+h1:nth-child(1){
+animation-delay: 0s;
+}
+h1:nth-child(2){
+    animation-delay: 0.3s;
+}h1:nth-child(3){
+    animation-delay: 0.6s;
+}h1:nth-child(4){
+    animation-delay: 0.9s;
+}h1:nth-child(5){
+    animation-delay: 1.2s;
+}h1:nth-child(6){
+    animation-delay: 1.5s;
+}h1:nth-child(7){
+    animation-delay: 1.8s;
+}h1:nth-child(8){
+    animation-delay: 2.1s;
+}h1:nth-child(9){
+    animation-delay: 2.4s;
+}h1:nth-child(10){
+    animation-delay: 2.7s;
+}h1:nth-child(11){
+    animation-delay: 2.9s;
+}h1:nth-child(12){
+    animation-delay: 3.2s;
+}h1:nth-child(13){
+    animation-delay: 3.5s;
+}h1:nth-child(14){
+    animation-delay: 3.8s;
+}h1:nth-child(15){
+    
+}
 `
 // const animation2 = keyframes`
 // 0% { opacity: 1; background:linear-gradient(.25turn,rgba(197, 216, 109, 1),rgb(255,255,255),rgb(255,255,255));}
@@ -29,6 +62,18 @@ animation: 4s ${animation}  infinite ;
 // `
 
 function Header(){
+
+const reacArray="CryptoConverter".split("")
+
+
+
+
+
+
+
+
+
+
     return( 
     <div className = "header">
         
@@ -40,7 +85,9 @@ function Header(){
             color: "rgba(27, 153, 139, 1)",
             textDecoration: 'none'
         }}
-        > <Header2>Crypto-Converter</Header2>
+        > <Header2>{reacArray.map((item, index)=>(
+            <h1 key={index}>{item}</h1>
+        ))}</Header2>
         </NavLink> 
         
     
