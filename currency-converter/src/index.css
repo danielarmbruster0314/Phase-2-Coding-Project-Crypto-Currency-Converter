@@ -30,3 +30,11 @@
   list-style: none;
  
 }
+
+.convert{
+  background-color: var(--portland-orange);
+}
+
+.criptodashboard{
+  background-color: #1B998B;
+}

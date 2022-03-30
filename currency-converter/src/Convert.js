@@ -1,17 +1,76 @@
 import {useState} from 'react';
-
+import Exchange from './Exchange.js';
 
 function Convert(){
+const [current, setCurrent] = useState('USD')
+const [converting, setConverting] = useState('BTC')
+const [amount, setAmount] = useState(1)
+const [exchange, setExchange] = useState(0)
+const [displayResult, setDisplayResult] = useState(0)
+
+
+function convert(){
+    const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com',
+      'X-RapidAPI-Key': '89810da5e7msh75b30d17b69208cp1d4af1jsne241ce2de733'
+    }
+  };
+  
+  fetch(`https://alpha-vantage.p.rapidapi.com/query?from_currency=${converting}&function=CURRENCY_EXCHANGE_RATE&to_currency=${current}`, options)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
+        setExchange(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
+        setDisplayResult(response["Realtime Currency Exchange Rate"]["5. Exchange Rate"] * amount)
+    })
+    .catch(err => console.error(err));
+}
+console.log(exchange)
+console.log(displayResult)
     return(
-        <div className="Convert">
+        <div className="criptodashboard">
+        <div className="convert">
             <h2>Converter</h2>
             <table>
                 <tbody>
                     <tr>
                         <td>Current Currency:</td>
-                            <td><input type="number" id="current" name="current" dir="rtl" placeholder="0.00"/></td>
+                            <td><input type="number" onChange={(e) =>{setAmount(e.target.value)}} value={amount} id="current" name="current" dir="rtl" placeholder="0.00"/></td>
                                 <td>
-                                    <select value={""} name="currentCurrency">
+                                <select onChange={(e)=>{setConverting(e.target.value)}} value={converting} name="cripto">
+                                <option value="BTC">Bitcoin</option>
+                                <option value="ETH">Ethereum</option>
+                                <option value="USDT">Tether</option>
+                                <option value="BNB">Binance-Coin</option>
+                                <option value="XRP">Ripple</option>
+                                <option value="ADA">Cardano</option>
+                                <option value="SOL">Solana</option>
+                                <option value="TRC">Terracoin</option>
+                                <option value="AVAX">Avalanche</option>
+                                <option value="DOT">Polkadot</option>
+                                <option value="DOGE">DogeCoin</option>
+                                <option value="BUSD">Binance-USD</option>
+                                <option value="UST">TerraUSD</option>
+                                <option value="SHIB">SHIBA-INU</option>
+                                <option value="WBTC">Wrapped Bitcoin</option>
+                                <option value="MATIC">Polygon</option>
+                                <option value="CRO">Crypto.com Coin</option>
+                                <option value="DAI">Dai</option>
+                                <option value="LCC">Litecoin-Cash</option>
+                                <option value="ATOM">Cosmos</option>
+                            </select>
+                                 </td>
+                            </tr>
+            <tr>
+               <td>Converted Currency:</td>
+                     <td>
+                <input type="number" disabled={true}  value={displayResult} id="converted" name="converted" dir="rtl" placeholder="0.00"/>
+                    </td>
+                        <td>
+                            <select onChange={(e)=>{setCurrent(e.target.value)}} value={current} name="currentCurrency">
+                                        <option value="USD">United States Dollar</option>
                                         <option value="AED">United Arab Emirates Dirham</option>
                                         <option value="AFN">Afghan Afghani</option>
                                         <option value="ALL">Albanian Lek</option>
@@ -154,7 +213,6 @@ function Convert(){
                                         <option value="TZS">Tanzanian Shilling</option>
                                         <option value="UAH">Ukrainian Hryvnia</option>
                                         <option value="UGX">Ugandan Shilling</option>
-                                        <option value="USD">United States Dollar</option>
                                         <option value="UYU">Uruguayan Peso</option>
                                         <option value="UZS">Uzbekistan Som</option>
                                         <option value="VND">Vietnamese Dong</option>
@@ -170,41 +228,13 @@ function Convert(){
                                         <option value="ZMW">Zambian Kwacha</option>
                                         <option value="ZWl">Zimbabwean Dollar</option>
                                     </select>
-                                 </td>
-                            </tr>
-            <tr>
-               <td>Converted Currency:</td>
-                     <td>
-                <input type="number" id="converted" name="converted" dir="rtl" placeholder="0.00"/>
-                    </td>
-                        <td>
-                            <select value={""} name="cripto">
-                                <option>Bitcoin</option>
-                                <option value="ETH">Ethereum</option>
-                                <option value="USDT">Tether</option>
-                                <option value="BNB">Binance-Coin</option>
-                                <option value="XRP">Ripple</option>
-                                <option value="ADA">Cardano</option>
-                                <option value="SOL">Solana</option>
-                                <option value="TRC">Terracoin</option>
-                                <option value="AVAX">Avalanche</option>
-                                <option value="DOT">Polkadot</option>
-                                <option value="DOGE">DogeCoin</option>
-                                <option value="BUSD">Binance-USD</option>
-                                <option value="UST">TerraUSD</option>
-                                <option value="SHIB">SHIBA-INU</option>
-                                <option value="WBTC">Wrapped Bitcoin</option>
-                                <option value="MATIC">Polygon</option>
-                                <option value="CRO">Crypto.com Coin</option>
-                                <option value="DAI">Dai</option>
-                                <option value="LCC">Litecoin-Cash</option>
-                                <option value="ATOM">Cosmos</option>
-                            </select>
                         </td> 
                     </tr>
                 </tbody>
             </table>
-        <button>Convert</button>
+        <button onClick={convert}>Convert</button>
+    </div>
+    <Exchange exchange={exchange}/>
     </div>
     )
 }
