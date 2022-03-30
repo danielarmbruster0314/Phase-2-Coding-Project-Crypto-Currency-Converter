@@ -20,7 +20,7 @@ useEffect(()=>{
     .catch(err => console.error(err));
 },[])
 console.log(article)
-let articles=article.splice(0,10)
+let articles=article.splice(20,30)
 
 useEffect(()=>{
   // const options = {
