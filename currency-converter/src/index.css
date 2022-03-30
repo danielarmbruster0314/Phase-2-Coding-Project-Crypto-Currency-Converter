@@ -4,17 +4,18 @@
 
 :root {
   --crimson: #D7263D;
-  --portland-orange: #F46036; 
-  --space-cadet: #1B998B;
+  --portland-orange: rgba(244, 96, 54, 1); 
+  --space-cadet: rgba(27, 153, 139, 1);
   --june-bud: #C5D86D;
   background: linear-gradient(#c6dbda,#fee1e8,#fed7c3, #f6eac2, #ecd5e3);
 }
 .news-list{
   margin: 0 auto;
-  background-color: #D7263D;
+  background-color:	rgb(0,0,0,.7);
   height: 75%;
   width: 75%;
   text-align: center;
+  border-radius: 25px;
 }
 .card img {
   width: 100%;
@@ -25,6 +26,8 @@
   font-family: 'Press Start 2P';
   color: var(--space-cadet);
   text-shadow: 2px 2px var(--portland-orange);
+  margin: 30%;
+  
 }
 
 .article{
@@ -97,4 +100,13 @@ h2{
 
 p{
   font-size: 20px;
+}
+.news-header{
+  color: var(--june-bud);
+  padding: 25px;
+}
+
+
+.Navlink{
+  text-decoration: none;
 }

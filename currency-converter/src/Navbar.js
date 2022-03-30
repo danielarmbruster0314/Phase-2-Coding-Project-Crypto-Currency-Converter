@@ -20,15 +20,13 @@ function NavBar(){
         <NavLink
         to="/"
         exact
-        style={linkStyles}
-        activeStyle={{background: "darkblue",}}>
+        className='navlink mainlink'>
           Main 
         </NavLink>
         <NavLink
         to="/converter"
         exact
-        style={linkStyles}
-        activeStyle={{background: "darkblue",}}>
+        className ="navlink converterlink">
           Converter
         </NavLink>
         <NavLink
