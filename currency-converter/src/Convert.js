@@ -42,7 +42,7 @@ console.log(displayResult)
                         <td>Current Currency:</td>
                             <td><input type="number" onChange={(e) =>{setAmount(e.target.value)}} value={amount} id="current" name="current" dir="rtl" placeholder="0.00"/></td>
                                 <td>
-                                <select onChange={(e)=>{setConverting(e.target.value)}} value={converting} name="cripto">
+                                <select onChange={(e)=>{setConverting(e.target.value)}} value={converting} id="cripto" name="cripto">
                                 <option value="BTC">Bitcoin</option>
                                 <option value="ETH">Ethereum</option>
                                 <option value="USDT">Tether</option>
@@ -72,7 +72,7 @@ console.log(displayResult)
                 <input type="number" disabled={true}  value={displayResult} id="converted" name="converted" dir="rtl" placeholder="0.00"/>
                     </td>
                         <td>
-                            <select onChange={(e)=>{setCurrent(e.target.value)}} value={current} name="currentCurrency">
+                            <select onChange={(e)=>{setCurrent(e.target.value)}} value={current} id="currentCurrency" name="currentCurrency">
                                         <option value="USD">United States Dollar</option>
                                         <option value="AED">United Arab Emirates Dirham</option>
                                         <option value="AFN">Afghan Afghani</option>
