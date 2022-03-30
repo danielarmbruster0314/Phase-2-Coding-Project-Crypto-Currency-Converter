@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from './Header.js';
 import Convert from './Convert.js';
 import NewsList from './NewsList.js';
+import styled, {keyframes} from 'styled-components'
 function App() {
 const [article, setArticle] = useState([])
 

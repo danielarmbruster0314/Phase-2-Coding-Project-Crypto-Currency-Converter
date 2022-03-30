@@ -37,7 +37,7 @@
 
 .articlelist li{
   list-style: none;
- /* float: left;*/
+  /*float: left;*/
   background-color: #1B998B;
   justify-content: center;
   display: inline-block;
@@ -61,12 +61,5 @@
 .convert{
   background-color: var(--portland-orange);
  border-radius: 25px;
-}
-
-.criptodashboard{
-  background-color: #1B998B;
-  margin: 0 auto;
-  text-align: center;
-  border-radius: 25px;
 }
 
