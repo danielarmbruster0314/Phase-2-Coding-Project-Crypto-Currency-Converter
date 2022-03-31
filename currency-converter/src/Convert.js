@@ -58,8 +58,9 @@ function handleSave(exchange, current, converted, displayResult, amount){
   body: JSON.stringify(data),
 })
 .then(response => response.json())
-.then(data => {
-  setSaved(data);
+.then(dat => {
+    
+  setSaved([...saved,data]);
 })
 .catch((error) => {
     console.error('Error:', error);
