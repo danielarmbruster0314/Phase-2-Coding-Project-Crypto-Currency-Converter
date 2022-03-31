@@ -178,10 +178,6 @@ border-radius: 5px; */
     see if theres another decoration to add(increase font size or add text decoration)*/
 }
 
-.navbar:hover{
-  color: purple;
-}
-
 .exchanger{
   color: var(--june-bud);
   font-family: "Cinzel";
