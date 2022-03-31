@@ -38,24 +38,32 @@
   margin: 5px;
   padding: 15px;
   border-radius: 15px;
-  border: solid var(--june-bud);
-  box-shadow: 0 0 1.5em black;
+  border: solid #fee1e8;
+  box-shadow: 0 0 .5em black;
 }
+
+.lilinkbox{
+  background: linear-gradient(#feb5a1, #fa98bd);
+  padding: 5px; 
+  border-radius: 5px;
+  box-shadow: 0 0 .25em black;
+  
+}
+
 
 .articlelinks{
   text-decoration: none;
-  background: linear-gradient(rgba(244, 96, 54, 1), rgba(215, 38, 61, 1) ) ;
-  color: var(--june-bud);
+  color: #c6dbda;
+  text-shadow: .75px 1px #720a49;
   border-radius: 5px;
-  box-shadow: 0 0 1em black;
   padding: 2.5px;
-  border: solid  1.5px var(--june-bud);
+  font-family: 'Press Start 2P';
 }
 
 .articlelist li{
   list-style: none;
   /*float: left;*/
-  background-color: #1B998B;
+  background-color: rgba(255,255,255,.85);
   justify-content: center;
   display: inline-block;
     vertical-align: top;
@@ -65,7 +73,6 @@
   display: inline-block;
 }
 .the-card {
- background-color: #1B998B;
  width: 220px;
  height: 220px;
 }
@@ -96,10 +103,15 @@
 }
 
 .criptodashboard{
-  background-color: #1B998B;
+  background-color: rgba(255, 255, 255, 0.375);
   margin: 15%;
   text-align: center;
   border-radius: 25px;
+  box-shadow: 0 0 .30em black;
+  font-family: 'Press Start 2P';
+  color: #c6dbda;
+  text-shadow: 2px 2px #d8adc7;
+  padding: 1.5em;
 }
 
 table{
@@ -122,7 +134,7 @@ button{
   font-size: 16px;
   margin: 5px;
   border-radius: 5px;
-  
+  background-color: rgb(255,255,255,.375);
 }
 
 h2{
@@ -152,8 +164,10 @@ p{
 }
 
 .news-header{
-  color: var(--june-bud);
+  color: #c6dbda;
+  text-shadow: .75px 1px #720a49;
   padding: 25px;
+  font-family: "Press Start 2P"
 }
 
 .NavLink{
@@ -161,7 +175,10 @@ p{
   padding: 30px;
 }
 .imagesfromarticle{
-  border: solid 2px var(--june-bud)
+  border: solid 2px #fa98bd;
+  width: 5em;
+  height: 10em;
+  border-radius: 20px 5px;
 }
 .navbar{
   text-align: center;
@@ -170,6 +187,7 @@ p{
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 30px;
+  padding-left: 10%;
   font-family: 'Press Start 2P';
   font-size: 22px;
 /* background-color: rgb(0,0,0,.7); 
@@ -191,5 +209,11 @@ border-radius: 5px; */
 }
 
 h1{
-  white-space: nowrap
+  white-space: nowrap;
+
+}
+
+h4{
+  font-family: "Staatliches";
+  color: #181bcaba;
 }

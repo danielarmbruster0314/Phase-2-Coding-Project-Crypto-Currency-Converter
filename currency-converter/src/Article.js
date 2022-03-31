@@ -41,7 +41,7 @@ function Article({article}){
             <div className='the-card'>
                 <img className="imagesfromarticle" src={newArray} alt="cripto"/> 
             <h4>{article.title}</h4>
-            <a className="articlelinks" href={article.url}>Click here to read article words</a>
+            <span className="lilinkbox"><a className="articlelinks" href={article.url}>Read Article </a></span>
             </div>
             </div>
         </li>
