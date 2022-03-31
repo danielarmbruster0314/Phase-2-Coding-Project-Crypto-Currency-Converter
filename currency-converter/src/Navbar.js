@@ -1,5 +1,19 @@
 import {NavLink} from "react-router-dom"
 import {useState} from 'react';
+import styled, {keyframes, css} from 'styled-components';
+
+const animation = keyframes`
+0% { opacity: 1; font-size: 1em;}
+25% { opacity: 1 ; font-size: 2em;}
+75% { opacity: 1; font-size: 2em;}
+100% {opacity: 1; font-size: 1em;}
+`
+
+
+const MyComp = styled.a`
+  animation: ${props => props.animate && css
+    `${animation} 2s ease-out infinite`};
+`;
 
 const linkStyles = {
     display: "inline-block",
@@ -12,6 +26,10 @@ const linkStyles = {
   };
 
 function NavBar(){
+  const[sure, setSure] = useState(false);
+  const[sure1, setSure1] = useState(false);
+  const[sure2, setSure2] = useState(false);
+
   const [style1, setStyle1] = useState({
         margin: "40px",
         color: "#d8adc7",
@@ -40,6 +58,7 @@ const [style3, setStyle3] = useState({
     color: "#f6eac2",
     textDecoration: 'none',
     textShadow: '2px 2px #bdac73'})
+    setSure(true)
   }
 
   function handleMouseOut(e){
@@ -47,6 +66,7 @@ const [style3, setStyle3] = useState({
     color: "#d8adc7",
     textDecoration: 'none',
     textShadow: '2px 2px #bdac73'})
+    setSure(false)
   }
 
   function handleMouseOver1(){
@@ -55,6 +75,7 @@ const [style3, setStyle3] = useState({
      color: "#f6eac2",
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
+     setSure1(true)
    }
  
    function handleMouseOut1(e){
@@ -62,6 +83,7 @@ const [style3, setStyle3] = useState({
      color: "#d8adc7",
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
+     setSure1(false)
    }
 
    function handleMouseOver2(){
@@ -70,6 +92,7 @@ const [style3, setStyle3] = useState({
      color: "#f6eac2",
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
+     setSure2(true)
    }
  
    function handleMouseOut2(e){
@@ -77,6 +100,7 @@ const [style3, setStyle3] = useState({
      color: "#d8adc7",
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
+     setSure2(false)
    }
 
     return(
@@ -90,7 +114,7 @@ const [style3, setStyle3] = useState({
               style1
         }
         className='navlink mainlink'>
-          Main 
+          <MyComp animate={sure}>Main</MyComp>  
         </NavLink>
         <NavLink
         to="/converter"
@@ -101,7 +125,7 @@ const [style3, setStyle3] = useState({
            style2       
            }
         className ="navlink converterlink">
-          Converter
+          <MyComp animate={sure1}>Converter</MyComp>
         </NavLink>
         <NavLink
         to="/news"
@@ -112,7 +136,7 @@ const [style3, setStyle3] = useState({
           style3
         }
         className='navlink newslink'>
-          Crytpo News
+          <MyComp animate={sure2}>Crytpo News</MyComp>
         </NavLink>
       </div>
     )
