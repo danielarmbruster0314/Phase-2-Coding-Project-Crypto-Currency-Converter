@@ -1,0 +1,20 @@
+{
+  "save": [
+    {
+      "id": 1,
+      "exchange": "json-server",
+      "current": "typicode",
+      "convert": "hello",
+      "display": "hello2",
+      "amount": "hello3"
+    },
+    {
+      "exchange": "45744.27000000",
+      "current": "USD",
+      "convert": "BTC",
+      "display": 45744.27,
+      "amount": 1,
+      "id": 2
+    }
+  ]
+}

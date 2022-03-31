@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Exchange from './Exchange.js';
 
 function Convert(){
@@ -9,7 +9,7 @@ const [exchange, setExchange] = useState(0)
 const [displayResult, setDisplayResult] = useState(0)
 const [submittedCurrent, setSubmittedCurrent] = useState('USD')
 const [submittedConverted, setSubmittedConverted] = useState('BTC')
-
+const [saved, setSaved] = useState([])
 function convert(){
     const options = {
     method: 'GET',
@@ -32,6 +32,42 @@ function convert(){
 }
 console.log(exchange)
 console.log(displayResult)
+
+useEffect(()=>{
+    fetch('http://localhost:8000/save')
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)
+        setSaved(data)})
+},[])
+
+function handleSave(exchange, current, converted, displayResult, amount){
+    
+    const data = {
+        exchange: exchange,
+        current: current,
+        convert: converted,
+        display: displayResult,
+        amount: amount
+    }
+    
+    fetch('http://localhost:8000/save', {
+  method: 'POST', 
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  setSaved(data);
+})
+
+}
+
+
+
+
     return(
         <div className="criptodashboard">
         <div className="convert">
@@ -237,7 +273,7 @@ console.log(displayResult)
             </table>
         <button className="top_button"onClick={convert}>Convert</button>
     </div>
-    <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted}/>
+    <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted} displayResult={displayResult} amount={amount} handleSave={handleSave}/>
     </div>
     )
 }
