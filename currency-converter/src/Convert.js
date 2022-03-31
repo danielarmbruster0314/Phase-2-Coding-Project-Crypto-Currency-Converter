@@ -235,7 +235,7 @@ console.log(displayResult)
                     </tr>
                 </tbody>
             </table>
-        <button onClick={convert}>Convert</button>
+        <button className="top_button"onClick={convert}>Convert</button>
     </div>
     <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted}/>
     </div>

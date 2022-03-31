@@ -16,7 +16,7 @@ function Exchange({ exchange, current, converted }){
             {isOn ? <p>$ {Math.floor(exchange)}.00</p> : <p>$ {exchange}</p>}
             
             <p>{converted} to {current}</p>
-            <button onClick={handleButtonClick}>Round Exchange</button>
+            <button className="bot_button" onClick={handleButtonClick}>Round Exchange</button>
         </div>
     )
 }
