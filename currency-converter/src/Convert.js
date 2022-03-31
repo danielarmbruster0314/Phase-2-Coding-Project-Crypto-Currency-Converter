@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import Exchange from './Exchange.js';
-
+import Saveconverstion from './Saveconverstion.js';
 function Convert(){
 const [current, setCurrent] = useState('USD')
 const [converting, setConverting] = useState('BTC')
@@ -37,10 +37,9 @@ useEffect(()=>{
     fetch('http://localhost:8000/save')
     .then(resp => resp.json())
     .then(data => {
-        console.log(data)
         setSaved(data)})
 },[])
-
+console.log(saved)
 function handleSave(exchange, current, converted, displayResult, amount){
     
     const data = {
@@ -62,7 +61,9 @@ function handleSave(exchange, current, converted, displayResult, amount){
 .then(data => {
   setSaved(data);
 })
-
+.catch((error) => {
+    console.error('Error:', error);
+  });
 }
 
 
@@ -274,6 +275,7 @@ function handleSave(exchange, current, converted, displayResult, amount){
         <button className="top_button"onClick={convert}>Convert</button>
     </div>
     <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted} displayResult={displayResult} amount={amount} handleSave={handleSave}/>
+    <Saveconverstion saved={saved}/>
     </div>
     )
 }
