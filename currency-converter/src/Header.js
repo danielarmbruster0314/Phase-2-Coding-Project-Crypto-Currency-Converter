@@ -82,7 +82,7 @@ const reacArray="CryptoConverter".split("")
         exact
         className='navlink mainlink'
         style={{
-            color: "rgba(27, 153, 139, 1)",
+            color: "#d8adc7",
             textDecoration: 'none'
         }}
         > <Header2>{reacArray.map((item, index)=>(
