@@ -7,6 +7,22 @@
       "convert": "empty",
       "display": "empty",
       "amount": "empty"
+    },
+    {
+      "exchange": 0,
+      "current": "USD",
+      "convert": "BTC",
+      "display": 0,
+      "amount": "1",
+      "id": 2
+    },
+    {
+      "exchange": "45757.18000000",
+      "current": "USD",
+      "convert": "BTC",
+      "display": 2745430.8,
+      "amount": "60",
+      "id": 3
     }
   ]
 }

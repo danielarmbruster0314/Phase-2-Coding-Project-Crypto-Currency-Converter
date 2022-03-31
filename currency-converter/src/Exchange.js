@@ -17,7 +17,7 @@ function Exchange({ exchange, current, converted, displayResult, amount, handleS
 }
     return(
         <div className="exchanger">
-            <h1 className="rate">Exchange Rate</h1>
+            <h2 className="rate">Exchange Rate</h2>
             {isOn ? <span>
                 <p>$ {Math.floor(exchange)}.00 per unit</p>
                 <p>$ {displayResult}</p>
