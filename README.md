@@ -1,5 +1,5 @@
 # Phase-2-Coding-Project-Crypto-Currency-Converter 
-
+start server: json-server --watch db.json --port 8000
 
 #-- The App --#
 

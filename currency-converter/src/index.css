@@ -205,6 +205,9 @@ border-radius: 5px; */
 
 h1{
   white-space: nowrap;
+  font-family: 'Press Start 2P';
+  color: #c6dbda;
+  text-shadow: 2px 2px #d8adc7
 
 }
 a{
