@@ -22,7 +22,8 @@ function NavBar(){
         style={{
             margin: "5px 0px",
             color: "rgba(27, 153, 139, 1)",
-            textDecoration: 'none'
+            textDecoration: 'none',
+            textShadow: '2px 2px #bdac73'
         }}
         className='navlink mainlink'>
           Main 
@@ -33,7 +34,8 @@ function NavBar(){
         style={{
             margin: "5px 30px",
             color: "rgba(27, 153, 139, 1)",
-            textDecoration: 'none'
+            textDecoration: 'none',
+            textShadow: '2px 2px #bdac73'
         }}
         className ="navlink converterlink">
           Converter
@@ -44,7 +46,8 @@ function NavBar(){
         style={{
             margin: "5px 0px",
             color: "rgba(27, 153, 139, 1)",
-            textDecoration: 'none'
+            textDecoration: 'none',
+            textShadow: '2px 2px #bdac73'
         }}
         className='navlink newslink'>
           Crytpo News

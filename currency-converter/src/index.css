@@ -150,11 +150,11 @@ h2{
 p{
   font-size: 20px;
 }
+
 .news-header{
   color: var(--june-bud);
   padding: 25px;
 }
-
 
 .NavLink{
   text-decoration: none;
@@ -169,9 +169,13 @@ p{
   margin-left: 15%;
   margin-top: 50px;
   margin-bottom: 50px;
-background-color: rgb(0,0,0,.7); 
-padding: 30px;
-border-radius: 5px;
+  padding: 30px;
+  font-family: 'Press Start 2P';
+  font-size: 22px;
+/* background-color: rgb(0,0,0,.7); 
+border-radius: 5px; */
+/* get rid of backgroundcolor and border radius 
+    see if theres another decoration to add(increase font size or add text decoration)*/
 }
 
 .exchanger{
