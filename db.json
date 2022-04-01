@@ -23,6 +23,14 @@
       "display": 2745430.8,
       "amount": "60",
       "id": 3
+    },
+    {
+      "exchange": "45618.55000000",
+      "current": "USD",
+      "convert": "BTC",
+      "display": 1186082.3,
+      "amount": "26",
+      "id": 4
     }
   ]
 }

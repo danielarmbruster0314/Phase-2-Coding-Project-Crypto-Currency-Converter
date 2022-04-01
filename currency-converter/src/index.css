@@ -89,9 +89,11 @@
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 15em;
-  margin-right: 15em;
+  margin-left: 15vw;
+  margin-right: 15vw;
   font-family: "Press Start 2P";
+  white-space: nowrap;
+  justify-content: center;
 }
 
 
@@ -111,7 +113,8 @@
 table{
   width: 500px;
   margin: 0 auto;
-  border-spacing: 4em 3em;
+  border-spacing: 2em 3em;
+ 
 }
 
 #cripto{
