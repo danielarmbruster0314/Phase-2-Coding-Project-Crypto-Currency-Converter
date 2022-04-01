@@ -36,6 +36,7 @@ console.log(articles)
           </Route> 
           <Route exact path="/converter">
             <NavBar />
+            <img className="thisbethecoin" src="https://cliply.co/wp-content/uploads/2021/02/372102230_BITCOIN_400px.gif" alt="no" />
             <Convert />
           </Route>
           <Route exact path="/news">

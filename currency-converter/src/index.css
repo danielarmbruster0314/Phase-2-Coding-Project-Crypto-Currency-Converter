@@ -107,7 +107,10 @@ body{
 
 .criptodashboard{
   background-color: rgba(255, 255, 255, 0.375);
-  margin: 15%;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  margin-right: 15%;
+  margin-left: 15%;
   text-align: center;
   border-radius: 25px;
   box-shadow: 0 0 .30em black;
@@ -187,7 +190,7 @@ p{
 }
 .navbar{
   text-align: center;
-  margin-right: 15%;
+  margin-right: 20%;
   margin-left: 15%;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -257,4 +260,8 @@ select {
 
 h1{
   cursor: pointer;
+}
+.thisbethecoin{
+  margin-left: 38%;
+  margin-right: 40%;
 }

@@ -287,6 +287,7 @@ function handleDelete(id){
             </table>
         <button className="top_button"onClick={convert}>Convert</button>
     </div>
+    
     <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted} displayResult={displayResult} amount={amount} handleSave={handleSave}/>
     <Saveconverstion handleDelete={handleDelete} saved={saved}/>
     </div>
