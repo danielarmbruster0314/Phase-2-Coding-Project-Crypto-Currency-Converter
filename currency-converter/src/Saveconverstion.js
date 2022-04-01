@@ -5,31 +5,43 @@ import styled, { keyframes, css } from 'styled-components';
 
 
 const animation = keyframes`
-0% { opacity: 1; font-size: 2em;}
-25% { opacity: 1 ; font-size: 3em;}
-75% { opacity: 1; font-size: 3em;}
-100% {opacity: 1; font-size: 2em;}
+0% { opacity: 1; font-size: 1.5em;}
+25% { opacity: 1 ; font-size: 2em;}
+75% { opacity: 1; font-size: 2em;}
+100% {opacity: 1; font-size: 1.5em;}
 `
 
-
+const animation1 = keyframes`
+0% { opacity: 1; font-size: 2.5em;}
+25% { opacity: 1 ; font-size: 2em;}
+75% { opacity: 1; font-size: 1.75em;}
+100% {opacity: 1; font-size: 1.25em;}
+`
 const MyComp = styled.p`
-font-size: 2em;
+font-size: 1em;
   animation: ${props => props.animate && css
     `${animation} 2s ease-out infinite`};
 `;
 
+const MyComp1 = styled.p`
+
+  animation: ${props => props.animate1 && css
+    `${animation1} 2s ease-out`};
+`;
 function Saveconverstion({ saved, handleDelete }){
-    const[isOn, setIsON] = useState(false)
+    const[isOn, setIsON] = useState(false);
     const[sure, setSure] = useState(false); 
-    
+    const[sure1, setSure1] = useState(false);
 
     function handleMouseOver(){
         setSure(true)
+        setSure1(false)
     }
 
 
     function handleMouseOut(){
         setSure(false)
+        setSure1(true)
     }
 
 function handleIsOn(){
@@ -53,13 +65,14 @@ function handleIsOn(){
     
     
     return(
-        <div>
+        <div><MyComp1 animate1={sure1}>
             <h1 
             className="saveheader" 
             onClick={handleIsOn} 
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}>
-            <MyComp animate={sure}>My Saves</MyComp></h1>
+                
+            <MyComp animate={sure}>My Saves</MyComp></h1></MyComp1>
            {isOn ? <ul className="articlelist">
             {saved1}
             </ul>: null}
