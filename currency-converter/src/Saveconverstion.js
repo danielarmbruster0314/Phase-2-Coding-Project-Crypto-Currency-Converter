@@ -56,8 +56,9 @@ function handleIsOn(){
         <div>
             <h1 onClick={()=>handleDelete(save.id)}>Saved {save.convert} to {save.current}Exchange Rate</h1>
             <p>{save.amount} {save.convert} </p>
-            <p>is</p>
+            <p><img className="coin2" src="https://i.gifer.com/origin/71/719ea2f44c791fc07e0e811940a0232b_w200.gif" alt ="plz"/> is <img className="coin2" src="https://i.gifer.com/origin/71/719ea2f44c791fc07e0e811940a0232b_w200.gif" alt ="plz"/></p>
             <p>${save.display} {save.current}</p>
+           
         </div>
         </li>
         )

@@ -68,7 +68,8 @@ function handleSave(exchange, current, converted, displayResult, amount){
 }
 
 function handleDelete(id){
-    
+    let result = window.confirm("Are you sure you want to Delete this save?")
+    if(result){
     fetch(`http://localhost:8000/save/${id}`,{
         method: 'DELETE'
     })
@@ -80,6 +81,7 @@ function handleDelete(id){
         setSaved(data1)
     })
     }
+}
 
 
     return(

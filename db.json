@@ -9,19 +9,19 @@
       "amount": "empty"
     },
     {
-      "exchange": 0,
+      "exchange": "46470.15000000",
       "current": "USD",
       "convert": "BTC",
-      "display": 0,
-      "amount": "1",
+      "display": 46470.15,
+      "amount": 1,
       "id": 2
     },
     {
-      "exchange": "45757.18000000",
+      "exchange": "46470.15000000",
       "current": "USD",
       "convert": "BTC",
-      "display": 2745430.8,
-      "amount": "60",
+      "display": 0,
+      "amount": "0",
       "id": 3
     }
   ]
