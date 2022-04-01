@@ -18,7 +18,7 @@ font-size: 2em;
     `${animation} 2s ease-out infinite`};
 `;
 
-function Saveconverstion({ saved }){
+function Saveconverstion({ saved, handleDelete }){
     const[isOn, setIsON] = useState(false)
     const[sure, setSure] = useState(false); 
     
@@ -37,11 +37,12 @@ function handleIsOn(){
 }
 
 
+
     const saved1 = saved.map((save)=>{
         return(
         <li className="article">
         <div>
-            <h1>Saved {save.convert} to {save.current}Exchange Rate</h1>
+            <h1 onClick={()=>handleDelete(save.id)}>Saved {save.convert} to {save.current}Exchange Rate</h1>
             <p>{save.amount} {save.convert} </p>
             <p>is</p>
             <p>${save.display} {save.current}</p>

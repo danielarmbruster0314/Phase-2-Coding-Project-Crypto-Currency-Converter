@@ -7,28 +7,32 @@ const animation = keyframes`
 25% { opacity: 1 ; font-size: 2em;}
 75% { opacity: 1; font-size: 2em;}
 100% {opacity: 1; font-size: 1em;}
+
+`
+const animation1 = keyframes`
+0% { opacity: 1; font-size: 1.75em;}
+25% { opacity: 1 ; font-size: 1.55em;}
+75% { opacity: 1; font-size: 1em;}
+100% {opacity: 1; font-size: 1em;}
+
 `
 
-
 const MyComp = styled.a`
-  animation: ${props => props.animate && css
-    `${animation} 2s ease-out infinite`};
+ 
+  animation: ${props => props.animate && css `${animation} 2s ease-out;`};
+  
 `;
 
-const linkStyles = {
-    display: "inline-block",
-    width: "50px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "blue",
-    textDecoration: "none",
-    color: "white",
-  };
+const Mycomp1 =styled.a`
+animation: ${props => props.animate1 && css `${animation1} 1s ease-out;`};`
 
 function NavBar(){
   const[sure, setSure] = useState(false);
   const[sure1, setSure1] = useState(false);
   const[sure2, setSure2] = useState(false);
+  const[notsure, setNotSure] = useState(false);
+  const[notsure1, setNotSure1] = useState(false);
+  const[notsure2, setNotSure2] = useState(false);
 
   const [style1, setStyle1] = useState({
         margin: "40px",
@@ -59,6 +63,7 @@ const [style3, setStyle3] = useState({
     textDecoration: 'none',
     textShadow: '2px 2px #bdac73'})
     setSure(true)
+    setNotSure(false)
   }
 
   function handleMouseOut(e){
@@ -67,6 +72,7 @@ const [style3, setStyle3] = useState({
     textDecoration: 'none',
     textShadow: '2px 2px #bdac73'})
     setSure(false)
+    setNotSure(true)
   }
 
   function handleMouseOver1(){
@@ -76,6 +82,7 @@ const [style3, setStyle3] = useState({
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
      setSure1(true)
+     setNotSure1(false)
    }
  
    function handleMouseOut1(e){
@@ -84,6 +91,7 @@ const [style3, setStyle3] = useState({
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
      setSure1(false)
+     setNotSure1(true)
    }
 
    function handleMouseOver2(){
@@ -93,6 +101,7 @@ const [style3, setStyle3] = useState({
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
      setSure2(true)
+     setNotSure2(false)
    }
  
    function handleMouseOut2(e){
@@ -101,6 +110,7 @@ const [style3, setStyle3] = useState({
      textDecoration: 'none',
      textShadow: '2px 2px #bdac73'})
      setSure2(false)
+     setNotSure2(true)
    }
 
     return(
@@ -114,7 +124,8 @@ const [style3, setStyle3] = useState({
               style1
         }
         className='navlink mainlink'>
-          <MyComp animate={sure}>Main</MyComp>  
+          <Mycomp1 animate1={notsure}>
+          <MyComp  animate={sure}>Main</MyComp></Mycomp1>  
         </NavLink>
         <NavLink
         to="/converter"
@@ -125,7 +136,8 @@ const [style3, setStyle3] = useState({
            style2       
            }
         className ="navlink converterlink">
-          <MyComp animate={sure1}>Converter</MyComp>
+          <Mycomp1 animate1={notsure1}>
+          <MyComp animate={sure1}>Converter</MyComp></Mycomp1>
         </NavLink>
         <NavLink
         to="/news"
@@ -136,7 +148,8 @@ const [style3, setStyle3] = useState({
           style3
         }
         className='navlink newslink'>
-          <MyComp animate={sure2}>Crytpo News</MyComp>
+          <Mycomp1 animate1={notsure2}>
+          <MyComp animate={sure2}>Crytpo News</MyComp></Mycomp1>
         </NavLink>
       </div>
     )

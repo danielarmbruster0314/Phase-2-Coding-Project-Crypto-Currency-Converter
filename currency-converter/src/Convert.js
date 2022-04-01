@@ -67,7 +67,19 @@ function handleSave(exchange, current, converted, displayResult, amount){
   });
 }
 
-
+function handleDelete(id){
+    
+    fetch(`http://localhost:8000/save/${id}`,{
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        const data1 = saved.filter(save => save.id !== id)
+        console.log(data1)
+        setSaved(data1)
+    })
+    }
 
 
     return(
@@ -276,7 +288,7 @@ function handleSave(exchange, current, converted, displayResult, amount){
         <button className="top_button"onClick={convert}>Convert</button>
     </div>
     <Exchange exchange={exchange} current={submittedCurrent} converted={submittedConverted} displayResult={displayResult} amount={amount} handleSave={handleSave}/>
-    <Saveconverstion saved={saved}/>
+    <Saveconverstion handleDelete={handleDelete} saved={saved}/>
     </div>
     )
 }
